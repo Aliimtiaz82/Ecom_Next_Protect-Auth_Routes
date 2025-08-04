@@ -1,0 +1,74 @@
+[
+  {
+    "id": "p001",
+    "name": "Wireless Bluetooth Headphones",
+    "category": "Electronics",
+    "price": 49.99,
+    "stock": 120,
+    "brand": "SoundMax",
+    "rating": 4.5,
+    "description": "High-quality wireless headphones with noise cancellation and 20-hour battery life.",
+    "image": "https://images.philips.com/is/image/philipsconsumer/491e2dd5e0d1466f8ee5b0cd010451ae?wid=700&hei=700&$pnglarge$",
+    "isFeatured": true
+  },
+  {
+    "id": "p002",
+    "name": "Ergonomic Office Chair",
+    "category": "Furniture",
+    "price": 199.99,
+    "stock": 35,
+    "brand": "ComfortPro",
+    "rating": 4.8,
+    "description": "Adjustable lumbar support, mesh back, and 360° swivel ergonomic chair for long work hours.",
+    "image": "https://static.webx.pk/files/19643/Images/anda-seat-luna-gaming-chair-price-in-pakistan-junaidtech-2-19643-0-141124123223446.jpg",
+    "isFeatured": false
+  },
+  {
+    "id": "p003",
+    "name": "Stainless Steel Water Bottle",
+    "category": "Home & Kitchen",
+    "price": 15.99,
+    "stock": 250,
+    "brand": "HydroMate",
+    "rating": 4.3,
+    "description": "Insulated water bottle keeps drinks cold for 24 hours or hot for 12 hours.",
+    "image": "https://harshaystore.pk/cdn/shop/files/yMUQomqCu4jzs8jE_900x.png?v=1722685072",
+    "isFeatured": false
+  },
+  {
+    "id": "p004",
+    "name": "4K Smart LED TV - 55 inch",
+    "category": "Electronics",
+    "price": 649.99,
+    "stock": 20,
+    "brand": "ViewPro",
+    "rating": 4.6,
+    "description": "55-inch 4K UHD Smart TV with HDR10, built-in streaming apps, and voice control.",
+    "image": "https://electrociti.pk/wp-content/uploads/2023/12/Dawlance-LED-65E22-65.png",
+    "isFeatured": true
+  },
+  {
+    "id": "p005",
+    "name": "Running Shoes - Men",
+    "category": "Footwear",
+    "price": 89.99,
+    "stock": 75,
+    "brand": "RunFast",
+    "rating": 4.2,
+    "description": "Lightweight, breathable running shoes with cushioned sole and arch support.",
+    "image": "https://cdn.mos.cms.futurecdn.net/KLJc2mBTPjopkmhQX94nf9.jpg",
+    "isFeatured": false
+  },
+  {
+    "id": "p006",
+    "name": "Gaming Laptop - 16GB RAM",
+    "category": "Computers",
+    "price": 1249.99,
+    "stock": 10,
+    "brand": "GameX",
+    "rating": 4.7,
+    "description": "High-performance gaming laptop with RTX graphics card and 1TB SSD.",
+    "image": "https://jarrods.tech/wp-content/uploads/2023/12/asus-rog-zephyrus-m16-2023-gaming-laptop-1024x576.jpg",
+    "isFeatured": true
+  }
+]
