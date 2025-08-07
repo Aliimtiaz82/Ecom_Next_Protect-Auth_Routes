@@ -2,7 +2,6 @@
 "use client";
 
 import { useRouter } from 'next/navigation';
-import { useDispatch } from 'react-redux';
 import React from 'react';
 import Link from 'next/link';
 import axios from 'axios';
@@ -11,7 +10,6 @@ import * as Yup from 'yup';
 
 const RegisterForm = () => {
   const router = useRouter();
-  const dispatch = useDispatch();
 
   // Yup validation schema
 const validationSchema = Yup.object({
