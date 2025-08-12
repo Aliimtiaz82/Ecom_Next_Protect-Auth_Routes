@@ -24,9 +24,17 @@ const LoginForm = () => {
       dispatch(login()); 
       
        router.push("/home");
-    } catch (err: any) {
-      alert("Login failed: " + err.response?.data?.message || err.message);
-    } 
+    } catch (err: unknown) {
+  let message = 'An unexpected error occurred.';
+
+  if (axios.isAxiosError(err)) {
+    message = err.response?.data?.message || err.message;
+  } else if (err instanceof Error) {
+    message = err.message;
+  }
+
+  alert(`Login failed: ${message}`);
+}
 
     setEmail('');
     setPassword('');

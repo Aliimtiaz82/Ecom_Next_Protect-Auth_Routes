@@ -1,13 +1,13 @@
 "use client";   
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Link from "next/link";
 import ImageSlider from "./ImageSlider"; 
 
 const Hero = () => {
 
 
-    let [slide , setSlide] = useState();
+    // let [slide , setSlide] = useState();
 
 
 

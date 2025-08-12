@@ -40,8 +40,8 @@ const validationSchema = Yup.object({
     alert(response.data.message);
     resetForm();
     router.push('/login');
-  } catch (error: any) {
-    if (error.response?.status === 400 && error.response.data.message === 'Email already registered') {
+  } catch (error: unknown) {
+    if (axios.isAxiosError(error) && error.response?.status === 400 && error.response.data.message === 'Email already registered') {
       setFieldError('email', 'Email is already registered');
     } else {
       console.error('Registration error:', error);

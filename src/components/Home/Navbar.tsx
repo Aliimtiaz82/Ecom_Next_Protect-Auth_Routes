@@ -23,7 +23,7 @@ export const Navbar = () => {
     if (!isLoggedIn) {
       router.push("/login");
     }
-  }, [isLoggedIn]);
+  }, [isLoggedIn , router]);
 
   if (!isLoggedIn) return null;
 
