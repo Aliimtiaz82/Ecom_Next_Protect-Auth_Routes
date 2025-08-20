@@ -1,6 +1,7 @@
 import connectDB from '@/lib/mongoose';
 import User from '@/model/Users';
 import { NextResponse } from 'next/server';
+import bcrypt from "bcryptjs";
 
 export async function POST(req: Request) {
   try {
@@ -13,8 +14,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: 'Email already registered' }, { status: 400 });
     }
 
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10);
+
     // Create new user
-    const newUser = new User({ username, email, password });
+    const newUser = new User({ username, email, password : hashedPassword });
     await newUser.save();
 
     return NextResponse.json({ message: 'User registered successfully' }, { status: 201 });

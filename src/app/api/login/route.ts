@@ -1,7 +1,7 @@
-
 import { NextResponse } from 'next/server';
 import connectionToDb from '@/lib/mongoose';
 import User from '@/model/Users';
+import bcrypt from 'bcryptjs';
 
 export async function POST(req: Request) {
   try {
@@ -10,11 +10,20 @@ export async function POST(req: Request) {
 
     const user = await User.findOne({ email });
 
-    if (!user || user.password !== password) {
+    if (!user) {
       return NextResponse.json({ message: 'Invalid credentials' }, { status: 401 });
     }
 
-    const response = NextResponse.json({ message: 'Login successful', user });
+    // Compare hashed password with entered password
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) {
+      return NextResponse.json({ message: 'Invalid credentials' }, { status: 401 });
+    }
+
+    const response = NextResponse.json({ 
+      message: 'Login successful', 
+      user: { id: user._id, username: user.username, email: user.email } // don't send password
+    });
 
     response.cookies.set('authToken', user._id.toString(), {
       httpOnly: true,
